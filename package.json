@@ -1,0 +1,38 @@
+{
+  "name": "@modul8co/homebridge-hikvision-nvr",
+  "displayName": "Homebridge Hikvision NVR",
+  "version": "1.0.1",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/modul8co/homebridge-hikvision-nvr"
+  },
+  "dependencies": {
+    "highland": "^2.13.5",
+    "homebridge-camera-ffmpeg": "v3.1.3",
+    "urllib": "^2.38.0",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@types/highland": "^2.12.10",
+    "@types/node": "^14.0.12",
+    "@types/node-persist": "^3.0.0",
+    "@types/xml2js": "^0.4.5",
+    "homebridge": "^1.3.8",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.2"
+  },
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "start": "npx homebridge -D -I -P . -U .homebridge -Q",
+    "start-ffmpeg": "npx homebridge -D -I -P ./node_modules/homebridge-camera-ffmpeg -U .homebridge-ffmpeg -Q"
+  },
+  "engines": {
+    "node": ">=10",
+    "homebridge": ">=1.0.0"
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ]
+}
