@@ -91,7 +91,6 @@ export class HikVisionCamera {
     const channelId = accessory.context.channelId;
     const cameraConfig = <CameraConfig> {
       name: accessory.displayName,
-      unbridge: true,
       videoConfig: {
         source: `-i rtsp://${accessory.context.username}:${accessory.context.password}@${accessory.context.host}/Streaming/Channels/${channelId}01`,
         stillImageSource: `-i http${accessory.context.secure ? "s" : ""}://${
